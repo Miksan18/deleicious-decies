@@ -20,12 +20,11 @@ const mongoose = require("mongoose");
 
 app.use(express.json());
 
-app.use("/api/auth", require("./routes/auth"));
 app.use("/api/menu", require("./routes/menu"));
 const orderRoutes = require("./routes/order");
 app.use("/api/order", orderRoutes);
 
-module.exports = router;
+
 
 /* DATABASE CONNECTION */
 
@@ -54,4 +53,10 @@ const upload = multer({ storage });
 
 app.post("/upload", upload.single("image"), (req, res) => {
   res.json({ imageUrl: req.file.filename });
+});
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });
