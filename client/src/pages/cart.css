@@ -1,0 +1,22 @@
+.cart {
+  padding: 50px;
+  background: #111;
+  color: white;
+  min-height: 100vh;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #333;
+  padding: 10px 0;
+}
+
+.checkout-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #ff5722;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
